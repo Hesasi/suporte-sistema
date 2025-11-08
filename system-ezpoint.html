@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EzPoint - Suporte Técnico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            🔧 <span>Suporte Técnico</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">🏠 Voltar</a>
+            <a href="index.html#contact">Contatos</a>
+        </div>
+    </nav>
+
+    <section class="systems">
+        <div class="hero-content">
+            <h1>📊 EzPoint</h1>
+            <p>Sistema de gestão e ponto eletrônico - Documentação completa</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Problemas e Soluções</h2>
+            
+            <div class="problems-grid">
+                <div class="problem-card" onclick="showSolution('erro-comunicador')">
+                    <h3>❌ Erro no Comunicador</h3>
+                    <p>Problemas de conexão e comunicação do sistema</p>
+                </div>
+                
+                <div class="problem-card" onclick="showSolution('cadastro-colaborador')">
+                    <h3>👥 Cadastro de Colaborador</h3>
+                    <p>Como cadastrar novos usuários no sistema</p>
+                </div>
+                
+                <div class="problem-card" onclick="showSolution('configuracao-ponto')">
+                    <h3>⏰ Configuração de Ponto</h3>
+                    <p>Configurar horários e turnos de trabalho</p>
+                </div>
+
+                <div class="problem-card" onclick="showSolution('relatorios')">
+                    <h3>📋 Geração de Relatórios</h3>
+                    <p>Como gerar e exportar relatórios do sistema</p>
+                </div>
+
+                <div class="problem-card" onclick="showSolution('backup')">
+                    <h3>💾 Backup do Sistema</h3>
+                    <p>Procedimentos de backup e restauração</p>
+                </div>
+
+                <div class="problem-card" onclick="showSolution('permissoes')">
+                    <h3>🔐 Controle de Permissões</h3>
+                    <p>Configurar níveis de acesso dos usuários</p>
+                </div>
+            </div>
+
+            <div class="solutions-container">
+                <div id="erro-comunicador" class="solution-content">
+                    <h4>❌ Solução para Erro no Comunicador</h4>
+                    <ol>
+                        <li><strong>Verificar Status do Serviço:</strong>
+                            <ul>
+                                <li>Acesse: Menu Serviços → Comunicador</li>
+                                <li>Verifique se o status está como "Rodando"</li>
+                                <li>Se não estiver, clique em "Iniciar Serviço"</li>
+                            </ul>
+                        </li>
+                        <li><strong>Reiniciar o Serviço:</strong>
+                            <ul>
+                                <li>Menu Serviços → Comunicador → Reiniciar</li>
+                                <li>Aguarde 30 segundos para inicialização completa</li>
+                            </ul>
+                        </li>
+                        <li><strong>Verificar Credenciais:</strong>
+                            <ul>
+                                <li>Arquivo: C:\EzPoint\config\config.ini</li>
+                                <li>Verifique as linhas: usuario= e senha=</li>
+                                <li>Se necessário, redefina as credenciais</li>
+                            </ul>
+                        </li>
+                        <li><strong>Testar Conexão:</strong>
+                            <ul>
+                                <li>Ping no servidor: ping 192.168.1.100</li>
+                                <li>Verifique se a porta 8080 está aberta</li>
+                                <li>Teste: telnet servidor 8080</li>
+                            </ul>
+                        </li>
+                        <li><strong>Contatar Suporte:</strong>
+                            <ul>
+                                <li>Se persistir, contate a equipe de infraestrutura</li>
+                                <li>Forneça logs: C:\EzPoint\logs\comunicador.log</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div id="cadastro-colaborador" class="solution-content">
+                    <h4>👥 Como Cadastrar Colaborador</h4>
+                    <ol>
+                        <li><strong>Acessar Módulo:</strong>
+                            <ul>
+                                <li>Menu: Colaboradores → Novo Cadastro</li>
+                                <li>Ou atalho: Ctrl + N</li>
+                            </ul>
+                        </li>
+                        <li><strong>Dados Pessoais:</strong>
+                            <ul>
+                                <li>Nome completo (obrigatório)</li>
+                                <li>CPF (com validação automática)</li>
+                                <li>Data de Admissão</li>
+                                <li>E-mail corporativo</li>
+                            </ul>
+                        </li>
+                        <li><strong>Configurações de Acesso:</strong>
+                            <ul>
+                                <li>Nome de usuário (máx. 15 caracteres)</li>
+                                <li>Senha inicial (será solicitada alteração no primeiro acesso)</li>
+                                <li>Grupo de permissões (selecionar conforme cargo)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Departamento e Cargo:</strong>
+                            <ul>
+                                <li>Selecionar departamento na lista</li>
+                                <li>Definir cargo/função</li>
+                                <li>Turno de trabalho</li>
+                            </ul>
+                        </li>
+                        <li><strong>Finalizar Cadastro:</strong>
+                            <ul>
+                                <li>Clique em "Salvar"</li>
+                                <li>Anote o ID do colaborador gerado</li>
+                                <li>Envie e-mail com instruções de acesso</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div id="configuracao-ponto" class="solution-content">
+                    <h4>⏰ Configuração de Ponto Eletrônico</h4>
+                    <ol>
+                        <li>Acessar "Configurações" > "Ponto Eletrônico"</li>
+                        <li>Definir horários de entrada, saída e intervalos</li>
+                        <li>Configurar tolerâncias e regras de horas extras</li>
+                        <li>Associar colaboradores aos turnos criados</li>
+                        <li>Testar a configuração com um usuário de teste</li>
+                    </ol>
+                </div>
+
+                <div id="relatorios" class="solution-content">
+                    <h4>📋 Geração de Relatórios</h4>
+                    <ol>
+                        <li>Acessar o módulo "Relatórios"</li>
+                        <li>Selecionar o tipo de relatório desejado</li>
+                        <li>Definir período e filtros necessários</li>
+                        <li>Visualizar prévia antes de gerar</li>
+                        <li>Exportar em PDF, Excel ou imprimir</li>
+                    </ol>
+                </div>
+
+                <div id="backup" class="solution-content">
+                    <h4>💾 Backup do Sistema</h4>
+                    <ol>
+                        <li>Acessar "Ferramentas" > "Backup"</li>
+                        <li>Selecionar dados para backup (completo ou parcial)</li>
+                        <li>Escolher local de armazenamento</li>
+                        <li>Agendar backup automático se necessário</li>
+                        <li>Verificar integridade do backup gerado</li>
+                    </ol>
+                </div>
+
+                <div id="permissoes" class="solution-content">
+                    <h4>🔐 Controle de Permissões</h4>
+                    <ol>
+                        <li>Acessar "Administração" > "Permissões"</li>
+                        <li>Selecionar usuário ou grupo</li>
+                        <li>Definir níveis de acesso por módulo</li>
+                        <li>Configurar horários de acesso se necessário</li>
+                        <li>Salvar e testar as permissões</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Equipe de Suporte Técnico - EzPoint</p>
+    </footer>
+
+    <script>
+        function showSolution(solutionId) {
+            const solutions = document.querySelectorAll('.solution-content');
+            solutions.forEach(solution => {
+                solution.style.display = 'none';
+            });
+            
+            const selectedSolution = document.getElementById(solutionId);
+            if (selectedSolution) {
+                selectedSolution.style.display = 'block';
+                selectedSolution.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            showSolution('erro-comunicador');
+        });
+    </script>
+</body>
+</html>
